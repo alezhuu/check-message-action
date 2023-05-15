@@ -7,9 +7,9 @@ const main = async() => {
     let message;
 
     if (event === 'push') {
-      message = core.getInput('push_message');
+      message = core.getInput('push_message') || '';
     } else if (event === 'pull_request') {
-      message = core.getInput('pull_message');
+      message = core.getInput('pull_message') || '';
     } else {
       throw new Error(`Unsupported event: ${event}`);
     }
