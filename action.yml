@@ -7,6 +7,9 @@ inputs:
   pull_message:
     description: "Pull message"
     required: false
+outputs:
+  result:
+    description: "Result of the message validation"
 runs: 
   using: node16
   main: index.js
