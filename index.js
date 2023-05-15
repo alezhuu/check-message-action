@@ -18,9 +18,11 @@ const main = async() => {
     if (message.startsWith('#')) {
       console.log("Message starts with '#'.");
       core.setOutput('result', 'success');
+         return true;
     } else {
       console.log("Message does not start with '#'.");
       core.setOutput('result', 'failure');
+         return false;
     }
   } catch (error) {
     core.setFailed(error.message);
