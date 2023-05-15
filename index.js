@@ -4,9 +4,9 @@ const github = require('@actions/github');
 const main = async() => {
     try{
         const msg = core.getInput('message');
-        const regex= /^#[a-zA-Z]+$/;
+        
     
-        if(regex.test(msg)){
+        if(msg.startsWith("#")){
             core.setOutput('Message OK');
         }else{
             core.setFailed("Incorrect comment format");
