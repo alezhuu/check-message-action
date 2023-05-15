@@ -20,7 +20,7 @@ const main = async() => {
     } else {
       console.log("Message does not start with '#'.");
       core.setOutput('result', 'failure');
-      process.exit(1);
+      core.setFailed("Message does not start with '#'.");
     }
   } catch (error) {
     core.setFailed(error.message);
