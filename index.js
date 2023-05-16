@@ -4,7 +4,6 @@ const github = require('@actions/github');
 const main = async() => {
    try {
     let  message = core.getInput('pull_info');
-         console.log(message);
     if (message.startsWith('#Esto es un ejemplo') || message.startsWith('# Esto es un ejemplo')) {
       console.log("Correct message format.");
       core.setOutput('result', 'success');
