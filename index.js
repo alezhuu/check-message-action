@@ -13,8 +13,8 @@ const main = async() => {
       core.setOutput('result', 'failure');
       core.setFailed("Incorrect message format.");
     }*/
-      
-      console.log(JSON.stringify(message));
+      const keys=Object.keys(message);
+      console.log(keys);
   } catch (error) {
     core.setFailed(error.message);
   }
