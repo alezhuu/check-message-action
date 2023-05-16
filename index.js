@@ -9,8 +9,9 @@ const main = () => {
       try {
         let  pullRequestInfo = core.getInput('pull_info');
         const parser = JSONStream.parse([true,'commit','message']);
-
-        const stream = fs.createReadStream(pullRequestInfo, { encoding: 'utf8' });
+        console.log(typeof(pullRequestInfo));
+        /*
+        const stream = fs.createReadStream('C:/Users/alzuhira/Desktop/Spectral/informed-domains-v2.json', { encoding: 'utf8' });
   
       stream.pipe(parser);
   
@@ -33,7 +34,7 @@ const main = () => {
       parser.on('error', (err) => {
         reject(err);
       });
-    
+    */
       } catch (error) {
         core.setFailed(error.message);
       }
