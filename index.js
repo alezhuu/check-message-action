@@ -10,6 +10,8 @@ const main = () => {
         let  pullRequestInfo = core.getInput('pull_info');
         const parser = JSONStream.parse([true,'commit','message']);
         console.log(typeof(pullRequestInfo));
+        console.log(pullRequestInfo);
+
         /*
         const stream = fs.createReadStream('C:/Users/alzuhira/Desktop/Spectral/informed-domains-v2.json', { encoding: 'utf8' });
   
