@@ -1,12 +1,9 @@
 name: "Check message format"
 description: "Commit message should start with #"
 inputs:
-  push_message:
-    description: "Body of the commit message"
-    required: false
   pull_message:
     description: "Pull message"
-    required: false
+    required: true
 outputs:
   result:
     description: "Result of the message validation"
