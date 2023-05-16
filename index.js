@@ -2,25 +2,14 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 const main = async() => {
-     try {
-    const event = process.env.GITHUB_EVENT_NAME;
-    let message;
-
-    if (event === 'push') {
-      message = core.getInput('push_message');
-    } else if (event === 'pull_request') {
-      message = core.getInput('pull_message');
-    } else {
-      throw new Error(`Unsupported event: ${event}`);
-    }
-
-    if (message.startsWith('#')) {
-      console.log("Message starts with '#'.");
+   try {
+    let  message = core.getInput('pull_message');
+    if (message.startsWith('#Esto es un ejemplo') || message.startsWith('# Esto es un ejemplo')) {
+      console.log("Correct message format.");
       core.setOutput('result', 'success');
     } else {
-      console.log("Message does not start with '#'.");
       core.setOutput('result', 'failure');
-      core.setFailed("Message does not start with '#'.");
+      core.setFailed("Incorrect message format.");
     }
   } catch (error) {
     core.setFailed(error.message);
