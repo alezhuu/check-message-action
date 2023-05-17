@@ -1,9 +1,12 @@
 name: "Check message format"
 description: "Commit message should start with #"
-#This action is expecting one input - last commit message 
+#This action is expecting two inputs, both required
 inputs:
   message:
     description: "Last commit message of the PR"
+    required: true
+  message_beginning:
+    description: "What the message shoud start with"
     required: true
 outputs:
   result:
