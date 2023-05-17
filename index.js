@@ -4,8 +4,9 @@ const github = require('@actions/github');
 const main = async() => {
    try {
     let  message = core.getInput('message'); //Get the message passed to the action
+      let format = core.getInput('message_beginning'); //Get the format passed to the action
       //Check if the message has established format or not
-    if (message.startsWith('#Esto es un ejemplo')) {
+    if (message.startsWith(format)) {
       console.log("Correct message format.");
       core.setOutput('result', 'success');
     } else {
