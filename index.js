@@ -6,7 +6,7 @@ const main = async() => {
     let  message = core.getInput('message'); //Get the message passed to the action
       let format = core.getInput('message_beginning'); //Get the format passed to the action
       //Check if the message has established format or not
-    if (message.startsWith(format)) {
+    if (format.test(message)) {
       console.log("Correct message format.");
       core.setOutput('result', 'success');
     } else {
