@@ -5,6 +5,9 @@ inputs:
   message:
     description: "Last commit message of the PR"
     required: true
+  message_beginning:
+    description: "Message format"
+    required: true
 outputs:
   result:
     description: "Result of the message validation"
