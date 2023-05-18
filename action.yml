@@ -5,9 +5,6 @@ inputs:
   message:
     description: "Last commit message of the PR"
     required: true
-  message_beginning:
-    description: "What the message shoud start with"
-    required: true
 outputs:
   result:
     description: "Result of the message validation"
